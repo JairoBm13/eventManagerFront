@@ -22,10 +22,4 @@ export class EventComponent implements OnInit {
     });
   }
 
-  back(element) {
-    this.api.editEvent(this.user.id, element).subscribe(data => {
-      this.router.navigate(['events']);
-    });
-  }
-
 }
