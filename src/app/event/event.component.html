@@ -1,0 +1,40 @@
+<div class="row">
+    <form #formSkill="ngForm">
+      <mat-form-field>
+        <input matInput disabled type="text" name="name" [(ngModel)]="event.name" placeholder="{{'Name' | translate}}">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Category</mat-label>
+        <mat-select disabled name="category" [(ngModel)]="event.category">
+          <mat-option *ngFor="let cat of categories" [value]="cat.value">
+            {{cat.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput disabled type="text" name="place" [(ngModel)]="event.place" placeholder="{{'Name' | translate}}">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput disabled type="text" name="address" [(ngModel)]="event.address" placeholder="{{'Name' | translate}}">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput disabled name="start_date" [(ngModel)]="event.start_date" [matDatepicker]="pickerstart" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="pickerstart"></mat-datepicker-toggle>
+        <mat-datepicker #pickerstart></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput disabled name="end_date" [(ngModel)]="event.end_date" [matDatepicker]="pickerend" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="pickerend"></mat-datepicker-toggle>
+        <mat-datepicker #pickerend></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Method</mat-label>
+        <mat-select disabled name="method" [(ngModel)]="event.method">
+          <mat-option *ngFor="let method of methods" [value]="method.value">
+            {{method.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+    </form>
+  </div>

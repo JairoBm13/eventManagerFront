@@ -1,0 +1,15 @@
+<div class="row">
+  <form #formSkill="ngForm">
+    <mat-form-field>
+      <input matInput type="text" name="email" [(ngModel)]="email" placeholder="{{'Name' | translate}}">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" name="password" [(ngModel)]="password" placeholder="{{'Name' | translate}}">
+    </mat-form-field>
+
+    <button mat-stroked-button color="primary" (click)="login(email, password)">{{'Login' |
+        translate}}</button>
+    <button mat-stroked-button color="primary" (click)="register(email, password)">{{'Register' |
+            translate}}</button>
+  </form>
+</div>
