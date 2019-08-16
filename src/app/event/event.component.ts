@@ -11,6 +11,13 @@ export class EventComponent implements OnInit {
 
   user;
   event;
+
+  categories = [
+    { value: 'Conferencia', viewValue: 'Conferencia' },
+    { value: 'Seminario', viewValue: 'Seminario' },
+    { value: 'Congreso', viewValue: 'Congreso' },
+    { value: 'Curso', viewValue: 'Curso' }];
+  methods = [{ value: 'true', viewValue: 'Presencial' }, { value: 'false', viewValue: 'Virtual' }];
   constructor(
     private api: ApiService,
     private route: ActivatedRoute) { }
